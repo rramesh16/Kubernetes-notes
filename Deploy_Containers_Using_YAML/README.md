@@ -1,6 +1,7 @@
 # Deploy Containers Using yaml
 
 ## NOTE: Refer to the .yaml file
+## NOTE: To view the yaml file: `cat <filename.yaml>`
 
 ## Create Deployment
 - Deploy the deployment.yaml file:
@@ -27,6 +28,9 @@ or
 - Issuing request to the port
  `curl host01:<nodePort>`
 
+ - To find any attributes:
+ `kubectl describe svc <name of service> | grep <name of attribute>`
+
 ## Scale deployment
 
 - To increase the number of instances running update the `replicas` in deployment.yaml file
@@ -39,3 +43,6 @@ or
 
 - View additional Pods
 `kubectl get pods`
+
+- View controllers
+`kubectl get rc`
